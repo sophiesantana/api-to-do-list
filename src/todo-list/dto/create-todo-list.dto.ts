@@ -1,1 +1,4 @@
-export class CreateTodoListDto {}
+export class CreateTodoListDto {
+  name: string;
+  done: boolean;
+}
