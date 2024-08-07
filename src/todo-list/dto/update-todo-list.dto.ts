@@ -1,4 +1,5 @@
-import { PartialType } from '@nestjs/mapped-types';
-import { CreateTodoListDto } from './create-todo-list.dto';
+import { PartialType, OmitType } from '@nestjs/mapped-types';
+import { TodoList } from '../entities/todo-list.entity';
 
-export class UpdateTodoListDto extends PartialType(CreateTodoListDto) {}
+export class UpdateTodoListDto extends PartialType(OmitType(TodoList, ['id'])) {}
+ 
